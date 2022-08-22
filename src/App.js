@@ -1,8 +1,15 @@
 import './App.css';
-import NavBar from './NavBar';
+import './componentes/NavBar.css';
+import NavBar from './componentes/NavBar.js';
+import './componentes/ItemListContainer.css';
+import ItemListContaineer from './componentes/ItemListContainer.js';
+
 function App() {
   return (
-    <NavBar />
+    <div className='contenedor'>
+      <NavBar />
+      <ItemListContaineer texto="Proximamente Articulos"/>
+    </div>
   );
 }
 
