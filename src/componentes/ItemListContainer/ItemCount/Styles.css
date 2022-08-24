@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+.Itemcounter{
+    margin: 5rem;
+    width: 200px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.stock{
+  color: #24252a;
+  font-size: 23px;
+  font-family: 'Montserrat', sans-serif;
+  align-self: center;
+}
+.Counter{
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.cantidad{
+    color: #24252a;
+    font-size: 23px;
+    font-family: 'Montserrat', sans-serif;
+}
+.btncounter{
+    padding: 9px 25px;
+    background-color: rgba(0,136,169,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
+  .btncounter:hover{
+    background-color: rgba(0,136,169,0.8);
+  }
+  .btnadd{
+    padding: 9px 25px;
+    background-color: white;
+    color: #24252a;
+    font-family: 'Montserrat', sans-serif;
+    border: 2px solid rgba(0,136,169,0.8);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
+  .btnadd:hover{
+    background-color: rgba(0,136,169,0.8);
+    color: white;
+  }

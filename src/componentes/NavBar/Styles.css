@@ -45,7 +45,7 @@ header{
 .navlinks li  a:hover{
   color:#0088a9
 }
-button{
+.cartbtn{
   margin-left: 20px;
   padding: 9px 25px;
   background-color: rgba(0,136,169,1);
@@ -54,6 +54,6 @@ button{
   cursor: pointer;
   transition: all 0.3s ease 0s;
 }
-button:hover{
+.cartbtn:hover{
   background-color: rgba(0,136,169,0.8);
 }

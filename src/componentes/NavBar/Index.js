@@ -9,7 +9,7 @@ const NavBar=()=>{
                     <li><a href="#">Sales</a></li>
                 </ul>
             </nav>
-            <a className="cta" href="#"><button><CartWidget /> Cart</button></a>
+            <a className="cta" href="#"><button className="cartbtn"><CartWidget /> Cart</button></a>
         </header>
         
 
