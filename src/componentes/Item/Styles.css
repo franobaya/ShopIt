@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+.Item{
+    margin: 2rem;
+    width: 250px;
+    height: 250px;
+    background-color: #24252a;
+    border-radius: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.Product{
+    color: white;
+    font-size: 23px;
+    font-family: 'Montserrat', sans-serif;
+    align-self: center;
+}
+.Precio{
+    color: white;
+    font-size: 19px;
+    font-family: 'Montserrat', sans-serif;
+    align-self: center;
+}

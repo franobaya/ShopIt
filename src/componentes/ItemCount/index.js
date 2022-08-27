@@ -24,7 +24,7 @@ const ItemCounter =({stock})=>{
 
     return(
         <div className="Itemcounter">
-                <h3 className='stock'>Stock Max 10</h3>
+                <h3 className='stock'>Stock Max {stock}</h3>
                 <div className="Counter">
                     <button onClick={restar} className="btncounter">-</button>
                     <span className="cantidad">{counter}</span>

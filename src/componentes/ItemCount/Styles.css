@@ -6,7 +6,6 @@
     padding: 0;
   }
 .Itemcounter{
-    margin: 5rem;
     width: 200px;
     height: 120px;
     display: flex;
@@ -14,8 +13,8 @@
     justify-content: space-around;
 }
 .stock{
-  color: #24252a;
-  font-size: 23px;
+  color: white;
+  font-size: 20px;
   font-family: 'Montserrat', sans-serif;
   align-self: center;
 }
@@ -27,7 +26,7 @@
     justify-content: space-around;
 }
 .cantidad{
-    color: #24252a;
+    color: white;
     font-size: 23px;
     font-family: 'Montserrat', sans-serif;
 }
