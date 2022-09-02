@@ -1,6 +1,10 @@
+
+
 export const stock=[
     {
         id: 1,
+        img: '/celu.webp',
+        descrip: "Nueva apariencia digna de un Note Conocé el Galaxy S22 Ultra, con el poder de Note. El marco pulido, delgado y audaz, rodea la forma extruida para lograr una simetría elegante. Y la cámara lineal, acentuada por anillos de lentes espejados, parece flotar en su lugar. El primer Galaxy S con S Pen integrado El S Pen se adapta directamente en la S por primera vez. Expulsalo desde la parte inferior del smartphone para escribir, hacer un dibujo o controlar tu smartphone. La latencia mejorada en Samsung Notes hace que cada pincelada se sienta tan natural como la tinta en papel, y podés convertir esas ideas escritas apresuradamente en texto legible.",
         nombre:"Product 1",
         precio: 1000,
         stock:20

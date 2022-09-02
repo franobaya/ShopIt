@@ -5,7 +5,9 @@ const ItemCounter =({stock})=>{
     const [counter, setCounter] = useState(1)
 
     const sumar = () =>{
-            setCounter( counter+1 )   
+        if (counter < stock ){
+            setCounter( counter+1 )
+        }   
     }
     
     const restar = () =>{
