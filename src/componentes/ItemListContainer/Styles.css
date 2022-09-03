@@ -12,3 +12,11 @@
     background-size: cover;
     background-attachment: fixed; 
 }
+.Loader{
+  font-size: xx-large;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: #24252a;
+  margin-top: 16rem;
+  padding: auto;
+}
