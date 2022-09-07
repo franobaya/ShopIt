@@ -1,11 +1,21 @@
+import { useState } from "react";
 import ItemCounter from "../ItemCount";
 import './Style.css';
 
 const ItemDetail = ({item}) =>{
+
+    const [cantidad, setCantidad] = useState(1)
+
+    const handleAgregar = () =>{
+        console.log("Usted compro "+cantidad+" "+item.nombre)
+
+        
+    }
+
     if(item===undefined){
         return <div></div>
     }
-    console.log(item.img)
+   
     return(
         <div className="cont">
             <div className="ItemDetail">
@@ -15,7 +25,12 @@ const ItemDetail = ({item}) =>{
             </div>
             <div className="ItemDetail2">
                 <p className="txt">{item.descrip} </p>
-                <ItemCounter stock={item.stock}/>
+                <ItemCounter 
+                stock={item.stock}
+                counter={cantidad}
+                setCounter={setCantidad}
+                handleAgregar={handleAgregar}
+                />
             </div>
         </div>
     )

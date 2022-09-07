@@ -1,8 +1,9 @@
-import { useState } from 'react';
 import './Styles.css';
-const ItemCounter =({stock})=>{
+
+
+const ItemCounter =({stock, counter, setCounter, handleAgregar})=>{
     
-    const [counter, setCounter] = useState(1)
+    
 
     const sumar = () =>{
         if (counter < stock ){
@@ -16,13 +17,7 @@ const ItemCounter =({stock})=>{
         }
     }
 
-    const add = () =>{
-        if (counter > stock ){
-            console.log("Solo tenemos "+ stock+ " en stock de este articulo")
-        }else{console.log("Usted compro "+counter +" articulos")}
-
-        
-    }
+    
 
     return(
         <div className="Itemcounter">
@@ -32,7 +27,7 @@ const ItemCounter =({stock})=>{
                     <span className="cantidad">{counter}</span>
                     <button onClick={sumar} className="btncounter">+</button>
                 </div>
-                <button onClick={add} className='btnadd'>Add To Cart</button>
+                <button onClick={handleAgregar} className='btnadd'>Add To Cart</button>
         </div>
     )
 }
