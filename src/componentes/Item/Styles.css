@@ -2,7 +2,7 @@
 .Item{
     margin: 2rem;
     width: 250px;
-    height: 250px;
+    height: 260px;
     background-color: #24252a;
     border-radius: 0.9rem;
     display: flex;
@@ -15,6 +15,10 @@
     font-size: 23px;
     font-family: 'Montserrat', sans-serif;
     align-self: center;
+}
+.itemImg{
+    width: 120px;
+    height: 130px;
 }
 .Precio{
     color: white;

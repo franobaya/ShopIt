@@ -1,15 +1,25 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { Link } from "react-router-dom";
+import { CartContext } from "../../Context/CartContext";
 import ItemCounter from "../ItemCount";
 import './Style.css';
 
 const ItemDetail = ({item}) =>{
 
+    const { cart, addToCart, isInCart } = useContext(CartContext)
+    console.log(cart)
+
     const [cantidad, setCantidad] = useState(1)
 
     const handleAgregar = () =>{
-        console.log("Usted compro "+cantidad+" "+item.nombre)
+        const itemToCart ={
+            id:item.id,
+            precio:item.precio,
+            nombre:item.nombre,
+            cantidad
+        }
 
-        
+        addToCart(itemToCart)
     }
 
     if(item===undefined){
@@ -25,12 +35,20 @@ const ItemDetail = ({item}) =>{
             </div>
             <div className="ItemDetail2">
                 <p className="txt">{item.descrip} </p>
-                <ItemCounter 
-                stock={item.stock}
-                counter={cantidad}
-                setCounter={setCantidad}
-                handleAgregar={handleAgregar}
-                />
+
+                {
+                    isInCart(item.id)
+                    ? <Link to="/cart" className="btnadd">Terminar mi compra</Link>
+                    : <ItemCounter 
+                        stock={item.stock}
+                        counter={cantidad}
+                        setCounter={setCantidad}
+                        handleAgregar={handleAgregar}
+                    />
+                }
+
+                
+                
             </div>
         </div>
     )

@@ -4,7 +4,6 @@ import './Styles.css';
 const ItemCounter =({stock, counter, setCounter, handleAgregar})=>{
     
     
-
     const sumar = () =>{
         if (counter < stock ){
             setCounter( counter+1 )

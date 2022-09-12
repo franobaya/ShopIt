@@ -2,8 +2,8 @@
     background-color: #24252a;
     margin: auto;
     margin-top: 2rem;
-    width: 85vw;
-    height: 100vh;
+    width: 55vw;
+    height: 95vh;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -27,7 +27,7 @@
 }
 .txt{
     color: white;
-    font-size: 19px;
+    font-size: 15px;
     font-family: 'Montserrat', sans-serif;
     margin: 2rem;
 }

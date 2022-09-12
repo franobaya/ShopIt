@@ -11,7 +11,7 @@ const NavBar=()=>{
                     <li><Link to='/category/Console'>Console</Link></li>
                 </ul>
             </nav>
-            <a className="cta" href="#"><button className="cartbtn"><CartWidget /> Cart</button></a>
+            <Link to="/cart" className="cta" ><button className="cartbtn"><CartWidget /> Cart</button></Link>
         </header>
         
 
