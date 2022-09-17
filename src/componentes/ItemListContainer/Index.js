@@ -2,34 +2,37 @@ import { useEffect, useState } from "react";
 import { pedirDatos } from "../../helpers/pedirDatos.js";
 import ItemList from "../ItemList/index.js";
 import { useParams } from 'react-router-dom';
-
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { db } from "../../firebase/cinfig.js";
 
 const ItemListContaineer=( )=>{
 
     const [productos,setProductos] = useState([])
 
     const {categoryId} = useParams()
-    console.log(categoryId)
+    
     const [loading, setLoading] = useState(true)
         
     useEffect(()=>{
 
         setLoading(true)
 
-        pedirDatos()
-            .then((res)=>{
-                if(!categoryId){
-                    setProductos(res)
-                }else{
-                    setProductos(res.filter((prod)=> prod.categoria === categoryId) )
-                }
-            })
-            .catch((err)=>{
-                console.log(err)
+        const productosRef = collection(db, 'productos')
+        const q = categoryId 
+                    ? query(productosRef, where('categoria','==',categoryId) )
+                    : productosRef
+
+        
+        getDocs(q)
+            .then((snapshot)=>{
+                const productosDB = snapshot.docs.map((doc) => ({ id: doc.id , ...doc.data() }) )
+                console.log(snapshot.docs.map((doc) => ({ id: doc.id , ...doc.data() }) ))
+                setProductos(productosDB)
             })
             .finally(()=>{
                 setLoading(false)
             })
+
     }, [categoryId])
 
     return(

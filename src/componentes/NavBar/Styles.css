@@ -59,3 +59,15 @@ header{
 .cartbtn:hover{
   background-color: rgba(0,136,169,0.8);
 }
+.cta{
+  visibility: hidden;
+  opacity: 0;
+  cursor: none;
+  transition: all 0.3s ease-in-out;
+}
+.ctavisible{
+  visibility: visible;
+  opacity: 1;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}

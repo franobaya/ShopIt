@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+.ItemInCart{
+    align-self: center;
+    margin: 0.5rem;
+    width: 90%;
+    height: 100px;
+    background-color: #24252a;
+    border-radius: 0.9rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}

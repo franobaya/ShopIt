@@ -1,6 +1,12 @@
 import CartWidget from "./CartWidget";
 import { Link } from 'react-router-dom'
+import { useContext } from "react";
+import { CartContext } from "../../Context/CartContext";
+
 const NavBar=()=>{
+
+    const {cart} = useContext(CartContext)
+    
     return(
         <header>
             <div className="BrandContainer"><Link to='/'><h3 className="Brand" alt="logo">ShopIt</h3></Link></div>
@@ -11,7 +17,7 @@ const NavBar=()=>{
                     <li><Link to='/category/Console'>Console</Link></li>
                 </ul>
             </nav>
-            <Link to="/cart" className="cta" ><button className="cartbtn"><CartWidget /> Cart</button></Link>
+            <Link to="/cart" className={`${cart.length > 0 ?'ctavisible':'cta' }`}  ><button className="cartbtn" ><CartWidget /> Cart</button></Link>
         </header>
         
 

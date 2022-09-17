@@ -3,6 +3,8 @@ import { pedirDatos } from "../../helpers/pedirDatos";
 import ItemDetail from "../ItemDetail/Index";
 import './Style.css';
 import { useParams } from 'react-router-dom'
+import { doc, getDoc} from "firebase/firestore"
+import { db } from "../../firebase/cinfig";
 
 const ItemDetailContainer = () =>{
 
@@ -12,18 +14,19 @@ const ItemDetailContainer = () =>{
     const {itemId} = useParams()
 
     useEffect(()=>{
+        setLoading(true)
 
 
-        pedirDatos()
-            .then((res)=>{
-                setItem( res.find((prod) => prod.id === Number(itemId) ) )
-            })
-            .catch((err)=>{
-                console.log(err)
+        const docRef= doc(db, 'productos', itemId)
+
+        getDoc(docRef)
+            .then((doc)=>{
+                setItem({id: doc.id, ...doc.data()})
             })
             .finally(()=>{
                 setLoading(false)
             })
+
             
     },[])
 
