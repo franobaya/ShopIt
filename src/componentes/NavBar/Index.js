@@ -5,7 +5,7 @@ import { CartContext } from "../../Context/CartContext";
 
 const NavBar=()=>{
 
-    const {cart} = useContext(CartContext)
+    const {cart, cartQuantity} = useContext(CartContext)
     
     return(
         <header>
@@ -18,6 +18,7 @@ const NavBar=()=>{
                 </ul>
             </nav>
             <Link to="/cart" className={`${cart.length > 0 ?'ctavisible':'cta' }`}  ><button className="cartbtn" ><CartWidget /> Cart</button></Link>
+            <span className={`${cart.length > 0 ?'spanvisible':'cta' }`}>{cartQuantity()}</span>
         </header>
         
 
