@@ -57,6 +57,17 @@ export const CartProvider  = ({children}) =>{
     
     
   }
+
+  const terminarCompraConSwal = (id) => {
+    Swal.fire({
+      title: 'Successful purchase!',
+      text: `Your order number is: ${id}`,
+      icon: 'success',
+      confirmButtonColor: '#3085d6',
+      confirmButtonText: 'Great!'
+    })
+    setCart([])
+  }
   
   useEffect( () => {
         localStorage.setItem('carrito', JSON.stringify(cart))
@@ -70,7 +81,8 @@ export const CartProvider  = ({children}) =>{
             cartTotal,
             emptyCart,
             removeItem,
-            cartQuantity
+            cartQuantity,
+            terminarCompraConSwal
           } }>
             {children}
         </CartContext.Provider>

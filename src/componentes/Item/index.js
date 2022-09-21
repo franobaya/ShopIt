@@ -11,7 +11,7 @@ const Item = ({producto}) =>{
                     {
                         producto.stock > 0
                         ?<Link to={`/item/${producto.id}`} className='btnadd'>See More</Link>
-                        : <button className='btnadd'>Sold Out</button>
+                        : <button className='btnadd roji'>Sold Out</button>
                     }
         </div>
     )

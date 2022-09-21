@@ -12,3 +12,9 @@
     align-items: center;
     justify-content: space-around;
 }
+.red{
+    background-color: rgb(252, 46, 46);
+}
+.red:hover{
+    background-color: rgb(212, 13, 13);
+}
