@@ -7,7 +7,7 @@ import './Style.css';
 const ItemDetail = ({item}) =>{
 
     const { cart, addToCart, isInCart } = useContext(CartContext)
-    console.log(cart)
+
 
     const [cantidad, setCantidad] = useState(1)
 

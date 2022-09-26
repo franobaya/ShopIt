@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { pedirDatos } from "../../helpers/pedirDatos.js";
 import ItemList from "../ItemList/index.js";
 import { useParams } from 'react-router-dom';
 import { collection, getDocs, query, where } from "firebase/firestore";
@@ -26,7 +25,6 @@ const ItemListContaineer=( )=>{
         getDocs(q)
             .then((snapshot)=>{
                 const productosDB = snapshot.docs.map((doc) => ({ id: doc.id , ...doc.data() }) )
-                console.log(snapshot.docs.map((doc) => ({ id: doc.id , ...doc.data() }) ))
                 setProductos(productosDB)
             })
             .finally(()=>{

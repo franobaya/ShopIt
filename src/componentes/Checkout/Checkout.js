@@ -23,6 +23,7 @@ const Checkout = () => {
         celu:'',
     })
 
+
     const handleInputChange = (e) => {
         setValues({
             ...values,
@@ -46,7 +47,6 @@ const Checkout = () => {
 
          addDoc(ordenesRef, orden)
              .then((doc) => {
-                 console.log(doc.id)
                  terminarCompraConSwal(doc.id)
                  setOrderId(doc.id)
                  
@@ -58,7 +58,7 @@ const Checkout = () => {
             <div className="compraexitosa">
                 <div className="contcompra">
                 <h2>Successful Purchase!</h2>
-                <p>Important! Save your order number please</p>
+                <p><strong>Important, save your order number</strong></p>
                 <p>Order number: <strong>{orderId}</strong></p>
                 <Link to='/' className="cartbtn">Go Shop!</Link>
                 </div>
